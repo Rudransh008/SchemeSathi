@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("FLASK_SECRET_KEY", "dev-only-change-me")
-DB_PATH = os.path.join(app.root_path, "schemesathi.db")
+DB_PATH = "/tmp/schemesathi.db" if os.getenv("VERCEL") else os.path.join(app.root_path, "schemesathi.db")
 
 def get_db():
     if "db" not in g:
@@ -245,6 +245,7 @@ def add_scheme():
     except sqlite3.IntegrityError:
         return jsonify({"error":"A scheme with this name already exists."}), 409
 
+init_db()
+
 if __name__ == "__main__":
-    init_db()
     app.run(debug=True)
