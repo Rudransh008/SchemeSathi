@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SchemeSathi — Government schemes, made simple</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">S</span><span>Scheme<span class="brand-accent">Sathi</span><small>GOVERNMENT SCHEME ASSISTANT</small></span></a>
+  <nav><a href="#how">How it works</a><a href="#schemes">Explore schemes</a><a href="#assistant">AI assistant</a></nav>
+  <a class="nav-cta" href="#eligibility">Check eligibility <span>↗</span></a>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="pulse"></span> SIMPLE ACCESS TO PUBLIC BENEFITS</div>
+    <h1>The right government scheme.<em> Made simple.</em></h1>
+    <p class="hero-lead">Discover government schemes that may fit your needs. Understand eligibility, benefits and documents — all in one place, in language that makes sense.</p>
+    <div class="hero-actions"><a class="btn primary" href="#eligibility">Find schemes for me <span>→</span></a><a class="text-link" href="#assistant">Ask the AI assistant ↗</a></div>
+    <div class="trust-row"><span>✓ Clear explanations</span><span>✓ Official source links</span><span>✓ Hindi & English support</span></div>
+  </div>
+  <div class="hero-art">
+    <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+    <div class="hero-card main-card"><div class="card-top"><span class="mini-icon">✦</span><span class="tag">SCHEME MATCH</span><span class="dots">•••</span></div><div class="match-label">Your discovery starts here</div><div class="match-title">Benefits made<br>easier to find.</div><div class="progress-line"><i></i></div><div class="card-foot"><span>Personalized guidance</span><b>01 / 03</b></div></div>
+    <div class="floating-note note-top"><span class="note-icon">✓</span><span><b>Clear eligibility</b><small>Know what applies to you</small></span></div>
+    <div class="floating-note note-bottom"><span class="note-icon teal">文</span><span><b>Your language</b><small>English · हिन्दी</small></span></div>
+    <div class="sparkle">✳</div>
+  </div>
+</section>
+<section class="stats-strip"><div><b>One place</b><span>to explore schemes</span></div><div><b>Simple language</b><span>for complex information</span></div><div><b>Source-led</b><span>guidance with official links</span></div></section>
+<section class="section" id="how">
+  <div class="section-heading"><div><div class="eyebrow">A SIMPLER WAY FORWARD</div><h2>Support that starts<br>with <em>your needs.</em></h2></div><p>No more jumping between pages and trying to decode long documents. Start with a few details and get guided to relevant information.</p></div>
+  <div class="steps-grid"><article class="step-card"><span class="step-no">01</span><div class="step-icon">◎</div><h3>Tell us about you</h3><p>Share only the basic details needed to explore relevant scheme information.</p></article><article class="step-card"><span class="step-no">02</span><div class="step-icon">⌕</div><h3>Explore your matches</h3><p>Compare your details with the conditions available in our scheme records.</p></article><article class="step-card"><span class="step-no">03</span><div class="step-icon">↗</div><h3>Know your next step</h3><p>Understand benefits, documents and where to find the official application.</p></article></div>
+</section>
+<section class="section eligibility-section" id="eligibility">
+  <div class="section-heading"><div><div class="eyebrow">PERSONALIZED DISCOVERY</div><h2>Find schemes that<br>may fit <em>your profile.</em></h2></div><p>Fill in what you know. If a detail is missing, we’ll show where more information is needed.</p></div>
+  <div class="workspace">
+    <form id="eligibility-form" class="profile-form">
+      <div class="form-title"><span class="form-icon">✳</span><div><h3>Your basic profile</h3><p>Fields marked optional can be left blank.</p></div></div>
+      <div class="form-grid">
+        <label>Age <span>Optional</span><input type="number" name="age" min="0" max="120" placeholder="e.g. 21"></label>
+        <label>Annual family income (₹) <span>Optional</span><input type="number" name="income" min="0" placeholder="e.g. 250000"></label>
+        <label>State <span>Optional</span><select name="state"><option value="">Select state</option><option>Madhya Pradesh</option><option>Rajasthan</option><option>Uttar Pradesh</option><option>Maharashtra</option><option>Gujarat</option><option>Delhi</option><option>Other</option></select></label>
+        <label>Occupation <span>Optional</span><select name="occupation"><option value="">Select occupation</option><option>Student</option><option>Farmer</option><option>Senior Citizen</option><option>Business Owner</option><option>Entrepreneur</option><option>Other</option></select></label>
+        <label class="full">Education level <span>Optional</span><select name="education"><option value="">Select education</option><option>School</option><option>Undergraduate</option><option>BTech</option><option>Postgraduate</option><option>Other</option></select></label>
+      </div>
+      <div class="privacy-note">🔒 Your details are used only to check the demo scheme records. Do not enter Aadhaar, bank account numbers or passwords.</div>
+      <button class="btn primary wide" type="submit">Show relevant schemes <span>→</span></button>
+    </form>
+    <div class="result-panel" id="results"><div class="empty-state"><div class="empty-symbol">⌕</div><h3>Your results will appear here</h3><p>Complete your profile to explore potentially relevant schemes.</p><span class="result-hint">No account required</span></div></div>
+  </div>
+  <p class="disclaimer">Important: SchemeSathi is an educational prototype, not a government service. Results are indicative only. Always confirm current eligibility, benefits and documents with the official authority.</p>
+</section>
+<section class="section categories-section" id="schemes">
+  <div class="section-heading"><div><div class="eyebrow">EXPLORE BY YOUR NEED</div><h2>What are you<br>looking for <em>today?</em></h2></div><p>Browse common areas of public support. Select a category to ask the assistant about it.</p></div>
+  <div class="category-grid">
+    <button class="category-card" data-question="Show me education and scholarship schemes"><span>▤</span><b>Education</b><small>Scholarships & learning</small><i>↗</i></button>
+    <button class="category-card" data-question="Show me agriculture schemes for farmers"><span>♧</span><b>Agriculture</b><small>Support for farmers</small><i>↗</i></button>
+    <button class="category-card" data-question="Explain healthcare support schemes"><span>✚</span><b>Healthcare</b><small>Health & wellbeing</small><i>↗</i></button>
+    <button class="category-card" data-question="Show me schemes for women"><span>♡</span><b>Women welfare</b><small>Support & opportunities</small><i>↗</i></button>
+    <button class="category-card" data-question="Show me pension schemes for senior citizens"><span>◷</span><b>Senior citizens</b><small>Social assistance</small><i>↗</i></button>
+    <button class="category-card" data-question="Show me schemes for small business owners"><span>↗</span><b>Business</b><small>Enterprise & livelihood</small><i>↗</i></button>
+  </div>
+</section>
+<section class="assistant-section" id="assistant">
+  <div class="assistant-intro"><div class="eyebrow light">HERE TO HELP, IN YOUR WORDS</div><h2>Have a question?<br><em>Just ask.</em></h2><p>Ask about a scheme, eligibility or documents. SchemeSathi uses its available scheme records to guide you to useful information.</p><div class="language-control"><label for="language">Response language</label><select id="language"><option>English</option><option>Hindi</option></select></div></div>
+  <div class="chat-card"><div class="chat-header"><div class="bot-avatar">S</div><div><b>SchemeSathi Assistant</b><small><span class="online-dot"></span> Ready to help</small></div><span class="chat-menu">•••</span></div><div class="chat-messages" id="messages"><div class="bot-message">Namaste! I can help you explore government scheme information. What would you like to know?</div><div class="suggestions"><button>Scholarships for students</button><button>Documents for PM-KISAN</button><button>Explain schemes in Hindi</button></div></div><form id="chat-form" class="chat-input"><input id="chat-message" placeholder="Ask anything about government schemes..." autocomplete="off"><button aria-label="Send message">↑</button></form><div class="chat-foot">AI guidance can make mistakes. Verify details with official sources.</div></div>
+</section>
+<section class="source-section"><div><div class="eyebrow">INFORMATION WITH A SOURCE</div><h2>Start with official<br><em>information.</em></h2><p>Use these government portals to verify scheme details, current guidelines and application processes.</p></div><div class="source-links"><a href="https://www.myscheme.gov.in/" target="_blank" rel="noopener"><span>↗</span><div><b>myScheme</b><small>Discover government schemes</small></div></a><a href="https://scholarships.gov.in/" target="_blank" rel="noopener"><span>↗</span><div><b>National Scholarship Portal</b><small>Scholarship information and services</small></div></a><a href="https://www.india.gov.in/" target="_blank" rel="noopener"><span>↗</span><div><b>National Portal of India</b><small>Government information and services</small></div></a></div></section>
+</main>
+<footer><a class="brand footer-brand" href="#"><span class="brand-mark">S</span><span>Scheme<span class="brand-accent">Sathi</span><small>THE RIGHT SCHEME, MADE SIMPLE</small></span></a><p>Independent educational prototype. Not affiliated with any government department.</p><span>© 2026 SchemeSathi</span></footer>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body></html>
